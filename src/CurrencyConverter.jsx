@@ -79,14 +79,11 @@ function CurrencyConverter() {
     </form>
     <button className='reset-fields' onClick={resetFields}>Reset fields</button>
     {errDest!==undefined && currencyDateError!==true && errSource!==undefined?<input readOnly className='conversion-result' defaultValue={rate}></input>:''}
-
-    
-
-
       
     {currencyDateError===true && showErrors?<p >time data {currencyDate} does not match format '$y-$m-$d' </p>:''}
       {errDest===undefined?<p>Symbols '{currencyDest}' are invalid for date {currencyDate} </p>:''}
       {errSource===undefined?<p>Symbols '{currencySource}' are invalid for date {currencyDate} </p>:''}
+
     </>
   );
 }
